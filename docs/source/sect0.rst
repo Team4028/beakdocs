@@ -7,7 +7,7 @@ WPILib
 ------------
 
 To install WPILib, you can either use a USB flash drive (ask from an experienced Controls member for help),
-or install from the `WPILib GitHub <https://github.com/wpilibsuite/allwpilib/releases/latest/>`.
+or install from the `WPILib GitHub <https://github.com/wpilibsuite/allwpilib/releases/latest/>`_.
 
 Finish this part
 
