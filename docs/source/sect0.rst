@@ -40,8 +40,12 @@ REV
 
 The REV Hardware Client is a utility for configuring, testing, changing CAN IDs, and logging data from REV Spark MAX motor controllers.
 
-The REV Hardware Client can be downloaded from `REV's website <https://docs.revrobotics.com/rev-hardware-client/>`_. Note that it is
-only available for Windows at the time of writing this. Download the executable and run it. Follow the onscreen instructions.
+The REV Hardware Client can be downloaded from `REV's website <https://docs.revrobotics.com/rev-hardware-client/>`_. Download the executable
+and run it. Follow the onscreen instructions.
+
+.. note::
+
+   The REV Hardware Client is currently only available for Windows.
 
 .. _Game Tools:
 
