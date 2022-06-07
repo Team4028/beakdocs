@@ -2,9 +2,9 @@
 
 # -- Project information
 
-project = 'Lumache'
-copyright = '2021, Graziella'
-author = 'Graziella'
+project = 'Beak Squad Programming Manual'
+copyright = '(copyleft) 2022 The Beak Squad'
+author = 'Carson Rueter'
 
 release = '0.1'
 version = '0.1.0'
