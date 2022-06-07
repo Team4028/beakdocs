@@ -7,9 +7,11 @@ WPILib
 ------------
 
 To install WPILib, you can either use a USB flash drive (ask from an experienced Controls member for help),
-or install from the `WPILib GitHub <https://github.com/wpilibsuite/allwpilib/releases/latest/>`_.
+or install from the `WPILib GitHub <https://github.com/wpilibsuite/allwpilib/releases/latest/>`_. Download the file
+for your computer's operating system, and run the executable. From there, follow the onscreen instructions, ensuring to
+select "Everything", and "Download VSCode for this computer only".
 
-Finish this part
+ADD PICS
 
 .. code-block:: java
 
@@ -22,24 +24,30 @@ Finish this part
 CTRE
 -----
 
-Phoenix tuner & framework
+The CTRE Phoenix Framework contains offline copies of the Phoenix library for use in robot projects,
+as well as the Phoenix Tuner utility. The Phoenix Tuner utility gives the ability to configure, test, change CAN IDs, and log data from
+CTRE's VictorSPX, TalonSRX, and TalonFX motor controllers.
 
-Creating recipes
-----------------
+The Phoenix Framework can be downloaded from `CTRE's GitHub <https://github.com/CrossTheRoadElec/Phoenix-Releases/releases/latest>`_.
+Download the file for your computer's hardware, and run the executable. From there, follow the onscreen instructions.
 
-To retrieve a list of random ingredients,
-you can use the ``lumache.get_random_ingredients()`` function:
+ADD PICS
 
-.. autofunction:: lumache.get_random_ingredients
+.. _REV:
 
-The ``kind`` parameter should be either ``"meat"``, ``"fish"``,
-or ``"veggies"``. Otherwise, :py:func:`lumache.get_random_ingredients`
-will raise an exception.
+REV
+----
 
-.. autoexception:: lumache.InvalidKindError
+The REV Hardware Client is a utility for configuring, testing, changing CAN IDs, and logging data from REV Spark MAX motor controllers.
 
-For example:
+The REV Hardware Client can be downloaded from `REV's website <https://docs.revrobotics.com/rev-hardware-client/>`_. Note that it is
+only available for Windows at the time of writing this. Download the executable and run it. Follow the onscreen instructions.
 
->>> import lumache
->>> lumache.get_random_ingredients()
-['shells', 'gorgonzola', 'parsley']
+.. _Game Tools:
+
+NI FRC Game Tools
+------------------
+
+The NI FRC Game Tools contain tools to control, bring up, and run robots from your computer.
+
+I'm gonna be honest I forget how to do this.
