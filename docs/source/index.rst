@@ -16,3 +16,4 @@ Contents
 
    sect0
    sect1
+   sect2
