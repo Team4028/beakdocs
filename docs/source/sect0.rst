@@ -1,5 +1,5 @@
 Section 0: WPILib & Vendor installation
-=====
+========================================
 
 .. _WPILib:
 
@@ -54,4 +54,4 @@ NI FRC Game Tools
 
 The NI FRC Game Tools contain tools to control, bring up, and run robots from your computer.
 
-I'm gonna be honest I forget how to do this.
+Instructions for installing the NI FRC Game Tools can be found on the `WPILib Docs <https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/frc-game-tools.html>`_.
