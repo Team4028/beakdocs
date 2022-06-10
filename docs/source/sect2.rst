@@ -8,7 +8,7 @@ Running Your First Motor
 
     Make ABSOLUTELY SURE that you are using a Talon SRX motor controller for this!
     If you try to run a different motor controller, it will fail. Ask a mentor/teacher
-    for help determining whether 
+    for help determining whether or not a motor controller is a TalonSRX.
 
 Firstly, we want to get into the main robot code. In your file tree on the left,
 first hit "src", then "java". You will see 4 files there, and 2 folders.
@@ -22,7 +22,7 @@ to run all of its code!
 
 Before we create and run our motor, we need to install a "vendor dependency" for CTRE.
 Vendor dependencies are libraries developed not by WPILib, but by external "vendors",
-who manufacture motor controlls, gyroscopes, etc. In this case, we are running a CTRE
+who manufacture motor controllers, gyroscopes, etc. In this case, we are running a CTRE
 motor controller, so we need the CTRE vendor dependency.
 
 Begin by opening the Command Palette again with `Ctrl+Shift+P`. Now type in
@@ -89,7 +89,7 @@ Your code should look like this:
 If your code looks like this, you're good to move on. Scroll down until you see a "robotInit" function.
 
 .. note:: 
-    `teleopInit` is the code that runs when you first start the robot in "tele-operated" mode, shortened to "teleop",
+    `teleopInit` is the code that runs whenever you start the robot in "tele-operated" mode, shortened to "teleop",
     where in a real robot, the drivers have control over it.
 
 .. note:: 
