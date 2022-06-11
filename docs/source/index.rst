@@ -17,3 +17,13 @@ Contents
    sect0
    sect1
    sect2
+   sect3
+
+.. toctree::
+   :maxdepth: 1
+   :titlesonly:
+   :caption: Electrical
+   :hidden:
+
+   electrical/basics
+   electrical/batteries

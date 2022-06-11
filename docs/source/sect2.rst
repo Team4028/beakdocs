@@ -45,15 +45,6 @@ that says:
 Put your cursor on the end of the line, and press Enter/Return twice. Now, we need to
 create our motor controller object.
 
-.. note::
-    In Java, an "object" is an instance of a specific type;
-    for example, a number, a string, or in this case a motor controller.
-
-.. note:: 
-    To create a "variable", that is, to store an object so you can use it later, we use the general
-    format of `TypeName variableName`. For example, to create a string named "hello",
-    we would do `String hello`.
-
 In this case, we are creating a `TalonSRX` (our motor controller). We can call it anything
 we want; for the time being, let's call it `turretMotor`. Thus, on our new line, we want to
 type:
@@ -92,29 +83,12 @@ If your code looks like this, you're good to move on. Scroll down until you see 
     `teleopInit` is the code that runs whenever you start the robot in "tele-operated" mode, shortened to "teleop",
     where in a real robot, the drivers have control over it.
 
-.. note:: 
-    A "function" is a set of instructions ("statements") that are executed when the function is "called".
-    The definition of a function looks something like `ReturnType functionName() { ... }`, where ReturnType is the type
-    of object the function will return at the end, and all statements to be executed are inside of the curly brackets `{}`.
-    
-    A function can be called with `functionName()` elsewhere in the code. You can freely assign a variable to the
-    value returned by a function.
-
 Set your cursor at the end of the line that says `m_robotContainer = new RobotContainer();`, and hit Enter twice.
 We now need to "assign" a value to our motor variable. Assignment is done through the `=` operator, i.e.
 `variableName = someValue;`.
 
-.. note:: 
-    When dealing with classes like `TalonSRX`, to create an "instance" of the object, we use the `new` keyword.
-    For example, to create a new `TypeName`, one would write `variableName = new TypeName();`. The function called by `new`
-    is called a "constructor". Some constructors may take arguments; this will be covered in a bit.
-
 With this in mind, to assign to our turretMotor object, we must create a new TalonSRX object. The TalonSRX
 constructor takes a single argument; the CAN ID of the motor controller. To determine the CAN ID... etc. Phoenix Tuner stuff
-
-.. warning:: 
-    So at this point I've already written down all the Java how-to... at this point should we point people to a
-    Java learning site? Don't really feel like explaining some of this anymore...
 
 In this case, our CAN ID should be 4. Thus, to "instantiate" (i.e. create) the `turretMotor`, we use:
 
