@@ -6,18 +6,13 @@ Section 0: WPILib & Vendor installation
 WPILib
 ------------
 
-To install WPILib, you can either use a USB flash drive (ask from an experienced Controls member for help),
-or install from the `WPILib GitHub <https://github.com/wpilibsuite/allwpilib/releases/latest/>`_. Download the file
-for your computer's operating system, and run the executable. From there, follow the onscreen instructions, ensuring to
-select "Everything", and "Download VSCode for this computer only".
+WPILib contains the WPILib Java library itself, several tools like dashboards, debugging utilities, extra
+robot communication, tools for system characterization, VS Code, and the JDK.
 
-ADD PICS
+Instructions for installing WPILib can be found on the `WPILib Docs <https://docs.wpilib.org/en/stable/docs/zero-to-robot/step-2/wpilib-setup.html>`_.
+Ensure to select "Everything" and "Download for this computer only".
 
-.. code-block:: java
-
-   public void coolFunction() {
-       System.out.println("Hi");
-   }
+Additionally, the WPILib installer may be available offline on a flash drive. Ask a veteran member for help.
 
 .. _CTRE:
 
@@ -31,7 +26,7 @@ CTRE's VictorSPX, TalonSRX, and TalonFX motor controllers.
 The Phoenix Framework can be downloaded from `CTRE's GitHub <https://github.com/CrossTheRoadElec/Phoenix-Releases/releases/latest>`_.
 Download the file for your computer's hardware, and run the executable. From there, follow the onscreen instructions.
 
-ADD PICS
+Additionally, the Phoenix Framework may be available offline on a flash drive. Ask a veteran member for help.
 
 .. _REV:
 
@@ -42,6 +37,8 @@ The REV Hardware Client is a utility for configuring, testing, changing CAN IDs,
 
 The REV Hardware Client can be downloaded from `REV's website <https://docs.revrobotics.com/rev-hardware-client/>`_. Download the executable
 and run it. Follow the onscreen instructions.
+
+Additionally, the REV Hardware Client may be available offline on a flash drive. Ask a veteran member for help.
 
 .. note::
 
