@@ -127,4 +127,29 @@ And will look like:
   :alt: Running turretMotor
   :width: 450
 
-Connect to radio, deploy, enable, etc.
+Now, you've created your code! It's time to deploy and run it. First of all, we need to connect to the robot's
+radio. Ensure the robot is turned on (you will see the orange light) and go to your Wi-Fi settings in the bottom right,
+selecting the radio (i.e. 4028_SNEED).
+
+picture of radio in wifi tab
+
+Now that we're connected to the robot, it's time to deploy the code. Go back to your code, and press `Shift+F5`.
+You may also need to press `Fn`.
+
+You might get a message saying "Starting a Gradle Daemon". After some time, you should see something like the following:
+
+.. image:: images/sect2/build-successful.png
+  :alt: Build Successful
+  :width: 550
+
+If you see any errors, ensure you're connected to the robot and that your code doesn't contain any errors (underlined in 
+red in your code).
+
+We've now successfully deployed our code! Now, it's time to run it! Open up the FRC Driver Station installed in section 0.
+You should see something like this:
+
+picture of driver station with comms
+
+Ensure "TeleOperated" is selected, and press "enable". The motor should run. If not, ask a veteran member for help.
+
+Congratulations! You've written and deployed your first code!
