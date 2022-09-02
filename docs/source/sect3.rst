@@ -51,7 +51,7 @@ lengthened position.
 Solenoids in Code
 ------------------
 
-Solenoids are even simpler than solenoids. They are simple binary actuators: they only have a true and false state.
+Solenoids are even simpler than servos. They are simple binary actuators: they only have a true and false state.
 Double solenoids are slightly different, with forward, reverse, and off states. However, they both accomplish the same
 thing: to either retract or extend a pneumatic cylinder (see the Pneumatics link in the sidebar).
 
@@ -80,4 +80,12 @@ The default state of a solenoid is false; so, to see a difference, you will want
 
     solenoid.set(true);
 
-Now, deploy and enable. You should hear a small click and the solenoid will light up.
+Now, deploy and enable. You should hear a small click and the solenoid will light up. If pneumatics are hooked up
+on your test board, a cylinder should fire as well.
+
+.. _doublesolenoidcode:
+
+Double Solenoids in Code
+-------------------------
+
+Bruh
