@@ -18,6 +18,7 @@ Contents
    sect1
    sect2
    sect3
+   sect4
 
 .. toctree::
    :maxdepth: 1
