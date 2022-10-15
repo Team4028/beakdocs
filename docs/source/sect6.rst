@@ -1,4 +1,4 @@
 Section 6: Control - Limits & Sensing
 ======================================
 
-Hi Anderewhi
+they sense and limit stuff

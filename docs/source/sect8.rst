@@ -1,4 +1,4 @@
 Section 8: Commands
 ====================
 
-a
+they command stuff to happen
