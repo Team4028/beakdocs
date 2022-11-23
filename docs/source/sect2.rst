@@ -25,7 +25,7 @@ Vendor dependencies are libraries developed not by WPILib, but by external "vend
 who manufacture motor controllers, gyroscopes, etc. In this case, we are running a CTRE
 motor controller, so we need the CTRE vendor dependency.
 
-Begin by opening the Command Palette again with `Ctrl+Shift+P`. Now type in
+Begin by opening the Command Palette again with ``Ctrl+Shift+P``. Now type in
 "manage vendor libraries". You should see the following:
 
 .. image:: images/sect2/vendor-libs.png
@@ -45,8 +45,8 @@ that says:
 Put your cursor on the end of the line, and press Enter/Return twice. Now, we need to
 create our motor controller object.
 
-In this case, we are creating a `TalonSRX` (our motor controller). We can call it anything
-we want; for the time being, let's call it `turretMotor`. Thus, on our new line, we want to
+In this case, we are creating a ``TalonSRX`` (our motor controller). We can call it anything
+we want; for the time being, let's call it ``turretMotor``. Thus, on our new line, we want to
 type:
 
 .. code-block:: java
@@ -54,7 +54,7 @@ type:
     TalonSRX turretMotor;
 
 .. note:: 
-    When you type `TalonSRX`, a menu will pop up, with the variable name showing up first. Hit "enter"
+    When you type ``TalonSRX``, a menu will pop up, with the variable name showing up first. Hit "enter"
     when you see this, and VSCode will automatically import the needed files to use the TalonSRX class.
 
 .. note::
@@ -80,17 +80,17 @@ Your code should look like this:
 If your code looks like this, you're good to move on. Scroll down until you see a "robotInit" function.
 
 .. note:: 
-    `teleopInit` is the code that runs whenever you start the robot in "tele-operated" mode, shortened to "teleop",
+    ``teleopInit`` is the code that runs whenever you start the robot in "tele-operated" mode, shortened to "teleop",
     where in a real robot, the drivers have control over it.
 
-Set your cursor at the end of the line that says `m_robotContainer = new RobotContainer();`, and hit Enter twice.
-We now need to "assign" a value to our motor variable. Assignment is done through the `=` operator, i.e.
-`variableName = someValue;`.
+Set your cursor at the end of the line that says ``m_robotContainer = new RobotContainer();``, and hit Enter twice.
+We now need to "assign" a value to our motor variable. Assignment is done through the ``=`` operator, i.e.
+``variableName = someValue;``.
 
 With this in mind, to assign to our turretMotor object, we must create a new TalonSRX object. The TalonSRX
 constructor takes a single argument; the CAN ID of the motor controller. To determine the CAN ID... etc. Phoenix Tuner stuff
 
-In this case, our CAN ID should be 4. Thus, to "instantiate" (i.e. create) the `turretMotor`, we use:
+In this case, our CAN ID should be 4. Thus, to "instantiate" (i.e. create) the ``turretMotor``, we use:
 
 .. code-block:: java
 
@@ -104,17 +104,17 @@ Your code should now look like this:
   :alt: turretMotor being assigned to.
   :width: 450
 
-Now that we've created our motor, it's time to run it! Scroll down until you find the `teleopInit` function.
+Now that we've created our motor, it's time to run it! Scroll down until you find the ``teleopInit`` function.
 Inside of this function (below the autonomous command stuff), we need to "call" a method within the TalonSRX object.
 
-In this case, the method is `<TalonSRX>.set()`. The `set()` method takes two parameters: the control mode (you'll learn
+In this case, the method is ``<TalonSRX>.set()``. The ``set()`` method takes two parameters: the control mode (you'll learn
 more about this later), and the "percent output", a value from -1 to 1, determining how fast the motor should run
 (0 = stop, -1/1 = full speed), and which direction (>0 = forward, <0 = reverse). 
 
-Begin by making two blank lines after the autonomous command stuff. Then, we need to call the `set()` function, with
-our desired parameters. Begin by typing `turretMotor.set`. A menu should pop up, with the `set` method showing up,
-with all of its parameters. Press enter to input this in. Now, replace `Mode` with `ControlMode.PercentOutput`
-(ensuring to import ControlMode), and `demand` with our target speed. For safety and tutorial reasons, run it low, i.e.
+Begin by making two blank lines after the autonomous command stuff. Then, we need to call the ``set()`` function, with
+our desired parameters. Begin by typing ``turretMotor.set``. A menu should pop up, with the ``set`` method showing up,
+with all of its parameters. Press enter to input this in. Now, replace ``Mode`` with ``ControlMode.PercentOutput``
+(ensuring to import ControlMode), and ``demand`` with our target speed. For safety and tutorial reasons, run it low, i.e.
 0.2. In the end, your code should be:
 
 .. code-block:: java
@@ -133,8 +133,8 @@ selecting the radio (i.e. 4028_SNEED).
 
 picture of radio in wifi tab
 
-Now that we're connected to the robot, it's time to deploy the code. Go back to your code, and press `Shift+F5`.
-You may also need to press `Fn`.
+Now that we're connected to the robot, it's time to deploy the code. Go back to your code, and press ``Shift+F5``.
+You may also need to press ``Fn``.
 
 You might get a message saying "Starting a Gradle Daemon". After some time, you should see something like the following:
 

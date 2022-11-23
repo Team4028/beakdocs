@@ -16,16 +16,16 @@ But how do we use them?
 
 For simplicity's sake, we will be using the BeakXboxController class as our wrapper around controllers. The BeakXboxController class itself wraps around the built-in WPILib class, XboxController, which provides functionality to use Xbox and Xbox-like controllers for robots. Buttons are mapped properly for an Xbox controller, and generally, this is how we give commands to the robot.
 
-To start, get the BeakXboxController class. Go to `here <https://raw.githubusercontent.com/Team4028/2023-Drive/master/src/main/java/frc/robot/utilities/BeakXBoxController.java>`_. In the file that opens, select all and copy. Now, in your `robot` folder, create a new folder and call it `utilities`. From here, right-click on the utilities folder, and click "New File". Name the file `BeakXBoxController.java` (watch your capitalization!), and press enter. Now, delete whatever may be in the new file, and then press `Ctrl+V` to paste the BeakXBoxController class. You have successfully created your controller!
+To start, get the BeakXboxController class. Go to `here <https://raw.githubusercontent.com/Team4028/2023-Drive/master/src/main/java/frc/robot/utilities/BeakXBoxController.java>`_. In the file that opens, select all and copy. Now, in your ``robot`` folder, create a new folder and call it ``utilities``. From here, right-click on the utilities folder, and click "New File". Name the file ``BeakXBoxController.java`` (watch your capitalization!), and press enter. Now, delete whatever may be in the new file, and then press ``Ctrl+V`` to paste the BeakXBoxController class. You have successfully created your controller!
 
 .. _codesetup:
 
 Setup in Code
 --------------
 
-To use the BeakXboxController, we first need to create our controller instance. Go to your `RobotContainer.java` file, and in the `RobotContainer`'s member variable definitions, create a `private BeakXboxController`, and name it `driverController`.
+To use the BeakXboxController, we first need to create our controller instance. Go to your ``RobotContainer.java`` file, and in the ``RobotContainer``'s member variable definitions, create a ``private BeakXboxController``, and name it ``driverController``.
 
-Now, in your `RobotContainer` constructor, BEFORE `configureButtonBindings` is called, initialize your driver controller. The `BeakXBoxController` constructor takes one argument: the port. Controller ports start at 0, meaning that the "first" controller is actually port 0. We want to use the first controller, so plug in 0 for your port. Your code should now look something like this:
+Now, in your ``RobotContainer`` constructor, BEFORE ``configureButtonBindings`` is called, initialize your driver controller. The ``BeakXBoxController`` constructor takes one argument: the port. Controller ports start at 0, meaning that the "first" controller is actually port 0. We want to use the first controller, so plug in 0 for your port. Your code should now look something like this:
 
 .. image:: images/sect4/controller-setup.png
   :alt: Controller Setup in Code
@@ -38,19 +38,19 @@ You've now set up a controller in code! Let's use it now.
 Usage
 ------
 
-You may have learned about inline functions in your Java training. If not, what you need to know is that the basic form is `() -> functionToRun()`. Feel free to look up what inline functions are if you need more info. For now, all you need to know is that we plug this into the controller to run something. So, let's get started!
+You may have learned about inline functions in your Java training. If not, what you need to know is that the basic form is ``() -> functionToRun()``. Feel free to look up what inline functions are if you need more info. For now, all you need to know is that we plug this into the controller to run something. So, let's get started!
 
 First of all, remember back to our previous lessons on servos, solenoids, and motors? Remember how you had to redeploy code every time you changed a value? Well, in competition, you *can't* redeploy code to change values! Thus, one of the many ways we change values "on-the-fly" is through controllers. For example, you can press one button to run a servo to a shortened position, and another to run it to an elongated position. That's exactly what we'll be doing here.
 
-To start in code, we first need to stop anything from being done automatically in teleop. Go to `Robot.java` and remove all 3 `set()` calls in `teleopInit`. We won't be needing these anymore. Now, remove your definition and initialization of your `servoMotor`, and place it into `RobotContainer.java`. Your `RobotContainer` should look like this:
+To start in code, we first need to stop anything from being done automatically in teleop. Go to ``Robot.java`` and remove all 3 ``set()`` calls in ``teleopInit``. We won't be needing these anymore. Now, remove your definition and initialization of your ``servoMotor``, and place it into ``RobotContainer.java``. Your ``RobotContainer`` should look like this:
 
 .. image:: images/sect4/servo-setup.png
   :alt: Servo Setup in Code
   :width: 500
 
-Now, how do we control it? We bind it! Binding means effectively mapping a button press to an action to be performed on the robot. With the `BeakXBoxController` class, this is easy! Scroll down to the `configureButtonBindings` method. This function is where we bind all our buttons.
+Now, how do we control it? We bind it! Binding means effectively mapping a button press to an action to be performed on the robot. With the ``BeakXBoxController`` class, this is easy! Scroll down to the ``configureButtonBindings`` method. This function is where we bind all our buttons.
 
-To bind to a specific button with `BeakXBoxController`, you can access the buttons themselves, for example, `driverController.a` accesses the A button. To bind a command to that button, call `.whenPressed` of the button. Now to input your command, use the inline function notation you just learned about. We're going to bind the A button to the shortened position of the servo; thus, we put in `() -> servoMotor.set(0.2)`. Don't forget your semicolon at the very end of the line. Your code should look like this:
+To bind to a specific button with ``BeakXBoxController``, you can access the buttons themselves, for example, ``driverController.a`` accesses the A button. To bind a command to that button, call ``.whenPressed`` of the button. Now to input your command, use the inline function notation you just learned about. We're going to bind the A button to the shortened position of the servo; thus, we put in ``() -> servoMotor.set(0.2)``. Don't forget your semicolon at the very end of the line. Your code should look like this:
 
 .. code-block:: java
 
@@ -77,4 +77,4 @@ But if you press it again, nothing happens. If you want to move it between posit
 
 Deploy and enable. Press B and it should go to the fully lengthened position. Then, press A, and it'll go back! This, fundamentally, is how we manage the state of the robot. We press different buttons, and they do different things. Now, you have control over whatever you want, without having to redeploy!
 
-Congratulations on your work! Controllers will be used exclusively in the next few modules, so make sure you understand everything. Try out some things on your own. Bind X to some other position. Bind Y to running a motor. Bind the right bumper (known in code as `rb`) to toggle the solenoid. The world is your oyster when it comes to controllers!
+Congratulations on your work! Controllers will be used exclusively in the next few modules, so make sure you understand everything. Try out some things on your own. Bind X to some other position. Bind Y to running a motor. Bind the right bumper (known in code as ``rb``) to toggle the solenoid. The world is your oyster when it comes to controllers!

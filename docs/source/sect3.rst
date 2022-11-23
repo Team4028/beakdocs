@@ -61,8 +61,8 @@ As always, create your solenoid variable and instantiate it. At the top of the R
 
     Solenoid solenoid;
 
-The Solenoid constructor takes two arguments: the pneumatic hub type (this is either `PneumaticsModuleType.CTREPCM`
-or `PneumaticsModuleType.REVPH`. Ask a veteran member for help determing which to use), and the channel. For now, we are
+The Solenoid constructor takes two arguments: the pneumatic hub type (this is either ``PneumaticsModuleType.CTREPCM``
+or ``PneumaticsModuleType.REVPH``. Ask a veteran member for help determing which to use), and the channel. For now, we are
 only using single solenoids. Trace the solenoid you want to control back to the PCM or PH, and find its port. Use this port
 in your constructor (robotInit):
 
@@ -72,8 +72,8 @@ in your constructor (robotInit):
 
 Replace 0 with the port you determined.
 
-To set a solenoid, we simply call `solenoid.set()`. This call takes one argument: true or false.
-The default state of a solenoid is false; so, to see a difference, you will want to set this to `true`
+To set a solenoid, we simply call ``solenoid.set()``. This call takes one argument: true or false.
+The default state of a solenoid is false; so, to see a difference, you will want to set this to ``true``
 (teleopInit):
 
 .. code-block:: java
