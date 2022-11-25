@@ -115,7 +115,7 @@ Now, we need this function to do something. Inside of the method, we need to cal
 
 .. _instance:
 
-Setting up a Subsystem Instance
+Setting Up a Subsystem Instance
 --------------------------------
 
 Finally, we need to implement a subsystem instance. Normally, to get an "instance" of a class/subsystem, we would call ``new Turret()``. In an effort to simplify things, however, we simply create an instance within the class, and whenever we need to use the subsystem, we use this one common instance. Instantiating a subsystem more than once will cause errors.
