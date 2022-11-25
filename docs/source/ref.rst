@@ -3,6 +3,8 @@ Quick Reference Guide
 
 This page provides a quick reference for repetitive and menial tasks, naming conventions, etc.
 
+.. _naming:
+
 Naming Conventions
 -------------------
 
@@ -49,3 +51,28 @@ General Conventions
    * Example: ``double targetSpeed``. This should be used within a function or algorithm to store a variable temporarily. For example, if a function takes in a distance in meters, and you need to change it to centimeters for it to be useful, then you can create a temporary variable; i.e. ``double distanceFeet = Units.metersToFeet(distanceMeters)``. You don't need to specify private or public.
 * Constant variables: ``VARIABLE_NAME`` (capital snake case, no prefix)
    * Example: ``private final double DEFAULT_TARGET_SPEED``. Constants are values that should NEVER change during usage of the robot, and only can be changed by redeploying code. This is useful for defaults, PID values, and similar unchanging values. Ensure that it's ``final``, as that will ensure the value can not be reassigned. If the variable is in a subsystem, then make it private; however, if it's within a ``Constants`` file, make sure it's public.
+
+.. _code:
+
+Commonly Used Code
+-------------------
+
+A reference for boilerplate, repetitive code we use all the time.
+
+.. _instances:
+
+Instances
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: java
+
+   private static SubsystemName m_instance;
+
+   ...
+
+   public static SubsystemName getInstance() {
+      if (m_instance == null) {
+         m_instance = new SubsystemName();
+      }
+      return m_instance;
+   }

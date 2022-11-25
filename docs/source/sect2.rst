@@ -90,11 +90,11 @@ We now need to "assign" a value to our motor variable. Assignment is done throug
 With this in mind, to assign to our turretMotor object, we must create a new TalonSRX object. The TalonSRX
 constructor takes a single argument; the CAN ID of the motor controller. To determine the CAN ID... etc. Phoenix Tuner stuff
 
-In this case, our CAN ID should be 4. Thus, to "instantiate" (i.e. create) the ``turretMotor``, we use:
+In this case, our CAN ID should be 5. Thus, to "instantiate" (i.e. create) the ``turretMotor``, we use:
 
 .. code-block:: java
 
-    turretMotor = new TalonSRX(4);
+    turretMotor = new TalonSRX(5);
 
 Don't forget the semicolon!
 
