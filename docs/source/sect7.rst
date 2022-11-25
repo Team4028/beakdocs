@@ -128,7 +128,9 @@ We begin by creating an instance variable. This instance variable MUST be ``priv
 
 Place this after all other variable declarations, but BEFORE the constructor.
 
-Next, we need to create a function to *get* that instance. In the :ref:`ref:instances` section of the quick reference guide, copy the ``getInstance()`` function shown. Place this function between the last method (``runMotor``) and the ``periodic`` method. Replace ``SubsystemName`` with the name of our subsystem, ``Turret``. Now, your code should look like this:
+:ref:`guides/cross-referencing-with-sphinx:explicit targets`
+
+Next, we need to create a function to *get* that instance. In the Instances section of the :doc:`/ref`, copy the ``getInstance()`` function shown. Place this function between the last method (``runMotor``) and the ``periodic`` method. Replace ``SubsystemName`` with the name of our subsystem, ``Turret``. Now, your code should look like this:
 
 .. image:: images/sect7/turret-instance.png
   :alt: Turret Subsystem with instance setup
