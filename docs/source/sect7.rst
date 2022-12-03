@@ -141,3 +141,42 @@ Our subsystem is now fully set up! Next, let's begin implementing it with the re
 .. note:: 
 
 	Literally all of this will need to be changed once I add the encoders and limit switches section. Unless we put subsystems and commands before that? I mean, subsystems and commands are so incredibly fundamental that it's probably more worth it putting it before those. And it's also more applicable when encoders and limit switches are put into subsystems and commands, as it shows what you really end up doing.
+
+.. _implementing:
+
+Implementing in RobotContainer
+------------------------------
+
+We've set up a subsystem and now can get an instance, so we can finally use it within the rest of the code!
+
+First, let's clean up RobotContainer a bit. Remove the definitions for ``exampleCommand`` and ``exampleSubsystem`` at the top of the class; we won't need those anymore. Replace the ``return m_autoCommand`` at the end of the file with ``return null;``.
+
+Now, we need to convert all our motor control with the new Turret subsystem!
+
+If you have any ``TalonSRX`` objects defined, remove them. Ignore the errors in ``configureButtonBindings`` for now. Let's replace it with a subsystem! Where ``exampleSubsystem`` was defined before, define your turret subsystem; it should be ``private``, of type ``Turret``, and must also follow naming conventions; thus, we will call it ``private Turret m_turret;``.
+
+In the ``RobotContainer`` constructor, we must initialize the turret. In the constructor, set ``m_turret`` to ``Turret.getInstance()``. That's it! You've initialized a Turret! Your code should look something like this:
+
+.. image:: images/sect7/robotcontainer-turret-1.png
+  :alt: RobotContainer with Turret instance set up.
+  :width: 900
+
+Let's fix those errors we see. In our Turret subsystem, we defined a function ``runMotor`` that calls ``.set()`` on the TalonSRX. Therefore, wherever we have ``turretMotor.set()`` in ``configureButtonBindings``, replace it with ``m_turret.runMotor()``. Keep in mind, the ``runMotor`` method doesn't need a ``ControlMode``. For example:
+
+.. code-block:: java
+
+  turretMotor.set(ControlMode.PercentOutput, 0.2);
+
+Becomes:
+
+.. code-block:: java
+
+  m_turret.runMotor(0.2);
+
+Replace all your ``set`` calls with this new syntax. Your ``configureButtonBindings`` could now look like this:
+
+.. image:: images/sect7/robotcontainer-turret-2.png
+  :alt: RobotContainer with subsystem bindings set up
+  :width: 600
+
+When there are no errors left and everything looks good, deploy your code. Try out your newly subsystem-ified buttons and see if they work! If not, ask a mentor or captain for help (and yes, screaming "CARSON!!!!" across the room is perfectly acceptable.)
