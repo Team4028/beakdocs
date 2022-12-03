@@ -14,6 +14,7 @@ Contents
 
 .. toctree::
 
+   ref
    sect0
    sect1
    sect2

@@ -13,8 +13,8 @@ Spotlight Search on MacOS.
   :width: 600
 
 VSCode may guide you through some initial setup. You can ignore most of this.
-When you're done with the setup, begin by hitting `Ctrl+Shift+P` (Note: most of the time,
-on MacOS, replace `Ctrl` with `Command`. If this is not the case, it will be noted.)
+When you're done with the setup, begin by hitting ``Ctrl+Shift+P`` (Note: most of the time,
+on MacOS, replace ``Ctrl`` with ``Command``. If this is not the case, it will be noted.)
 
 This should open up the "Command Palette". From here, type "create new project". You should
 see something akin to this:
